@@ -1,0 +1,11 @@
+Dikembe Mutombo, who was at Brussels Airport during bombing, is unharmed
+NBA Hall of Famer Dikembe Mutombo was among the crowds of people at busy Brussels Airport on Tuesday when a bomb that was part of a coordinated terrorist attack exploded.
+  [ 
+Now doing humanitarian work with his Dikembe Mutombo Foundation, Mutombo said on Facebook that he was safe. “God is good,” he wrote. “I am in Brussels Airport with this craziness. I am fine.”
+(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/all.js#xfbml\x3d1\x26#038;version\x3dv2.3";fjs.parentNode.insertBefore(js,fjs)})(document,"script","facebook-jssdk");
+ 
+ 
+Not long afterward, he posted a photo and wrote: “Thank you everyone. I am safe here. God is good.”
+(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/all.js#xfbml\x3d1\x26#038;version\x3dv2.3";fjs.parentNode.insertBefore(js,fjs)})(document,"script","facebook-jssdk");
+Mutombo had been in the Congo to speak at the Saving Lives Through the Prevention and Treatment of Cervical Cancer Conference, according to his foundation’s Facebook page.
+“Today we bow our heads in remembrance for those who lost their lives in Brussels,” the foundation’s statement said. “And we give thanks for all of the first responders offering support, strength, and solidarity to everyone impacted by these horrible tragedies. To those who are asking for an update — Dikembe was at the Brussels airport when the bombing happened this morning, and was thankfully unharmed. Local authorities are working to move everyone to safe locations while the City navigates through this act of terror. Please join us in keeping Brussels in your thoughts and prayers.”

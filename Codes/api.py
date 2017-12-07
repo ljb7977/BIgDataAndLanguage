@@ -5,33 +5,46 @@ from google.cloud.language import types
 
 import os
 
-# Instantiates a client
-client = language.LanguageServiceClient()
+dirnames = ["A1 (Paris)", "A2 (Nigeria)", "B1 (Belgium)", "B2 (Pakistan)", "C1 (France)", "C2 (Iraq)"]
 
-dirname = "B2 (Pakistan)"
-file_list = os.listdir(dirname)
-num = len(file_list)
-score = 0
-i = 0
-file_list.sort()
-for filename in file_list:
-	i+=1
-	if filename[-4:] != ".txt":
-		break
-	file = open(dirname+"\\"+filename, "r", encoding="utf-8")
-	title = file.readline()
-	text = file.read()
-	# The text to analyze
-	document = types.Document(
-		content=text,
-		type=enums.Document.Type.PLAIN_TEXT)
+for dirname in dirnames:
+	output = open("..\\Result\\"+dirname+".txt", "w", encoding = "utf-8")
+	dirname = "..\\Data\\"+dirname
 
-	# Detects the sentiment of the text
-	sentiment = client.analyze_sentiment(document=document).document_sentiment
+	# Instantiates a client
+	client = language.LanguageServiceClient()
 
-	print(title, end=" ")
-	print('Sentiment: {}'.format(sentiment.score)+"\n")
-	print(i, " of ", num)
-	score += sentiment.score
-	file.close()
-print(dirname+" score : ", score/num)
+	file_list = os.listdir(dirname)
+	num = len(file_list)
+	score = 0
+	i = 0
+	file_list.sort()
+	for filename in file_list:
+		i+=1
+		if filename[-4:] != ".txt":
+			break
+		#print(dirname+"\\"+filename)
+		file = open(dirname+"\\"+filename, "r", encoding="utf-8")
+		title = file.readline().strip()
+		text = file.read()
+
+		words = text.split()
+		# The text to analyze
+		document = types.Document(
+			content=text,
+			type=enums.Document.Type.PLAIN_TEXT)
+
+		# Detects the sentiment of the text
+		sentiment = client.analyze_sentiment(document=document).document_sentiment
+
+		output.write("|".join([title, str(round(sentiment.score, 2)), str(round(sentiment.magnitude, 2)), str(len(words))]))
+		output.write("\n")
+		print(title, end=", ")
+		print(round(sentiment.score, 2), end=", ")
+		print(round(sentiment.magnitude, 2), end=", ")
+		print(len(words))
+		print(i, "of", num)
+		#score += sentiment.score
+		file.close()
+	output.close()
+	#print(dirname+" score : ", score/num)

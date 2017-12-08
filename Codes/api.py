@@ -37,8 +37,9 @@ for dirname in dirnames:
 		# Detects the sentiment of the text
 		sentiment = client.analyze_sentiment(document=document).document_sentiment
 
-		output.write("|".join([title, str(round(sentiment.score, 2)), str(round(sentiment.magnitude, 2)), str(len(words))]))
+		output.write("|".join([title, str(round(sentiment.score, 2))]))
 		output.write("\n")
+		
 		print(title, end=", ")
 		print(round(sentiment.score, 2), end=", ")
 		print(round(sentiment.magnitude, 2), end=", ")
